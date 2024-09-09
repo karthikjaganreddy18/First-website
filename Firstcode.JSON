@@ -1,0 +1,20 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('loadDataButton');
+    const dataDisplay = document.getElementById('dataDisplay');
+
+    button.addEventListener('click', () => {
+        // Sample JSON data
+        const jsonData = {
+            "name": "John Doe",
+            "age": 30,
+            "email": "john.doe@example.com"
+        };
+
+        // Convert JSON to HTML
+        dataDisplay.innerHTML = `
+            <p><strong>Name:</strong> ${jsonData.name}</p>
+            <p><strong>Age:</strong> ${jsonData.age}</p>
+            <p><strong>Email:</strong> ${jsonData.email}</p>
+        `;
+    });
+});
